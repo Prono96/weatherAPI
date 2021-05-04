@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather</title>
   <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 <body>
-  <div class="location">
-    <h1 class="location-timezone">Time Zone</h1>
-    <img src="icon/sun-covered-by-cloud-weather-symbol.svg" alt="">
-  </div>
-  <div class="temperature">
-    <div class="degree-section">
-      <h2 class="temp-degree"><span>50</span></h2>
-      <span>&#176C</span>
+
+  <div class="weather-wrapper">
+    <div class="weather-card">
+        <div class="weather-icon sun"></div>
+        <h1 class="temp-degree">50</h1>
+        <p class="location-timezone">Madrid</p>
+        <p class="temp-description">description</p>
     </div>
-    <div class="temp-description">Its friggin cold</div>
+
+    
+    <!-- <div class="weather-card">
+        <div class="weather-icon cloud"></div>
+        <h1>14°</h1>
+        <p>London</p>
+    </div> -->
   </div>
-
-
-
   <script src="app.js"></script>
 </body>
 </html>
