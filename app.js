@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   let locationTimezone = document.querySelector('.location-timezone');
   let TempDegree = document.querySelector('.temp-degree');
   let TempDescription = document.querySelector('.temp-description');
-  let Icon = document.querySelector('.icon');
+  let Icon = document.querySelector('."weather-icon sun');
 
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -36,21 +36,21 @@ window.addEventListener("load", () => {
         
         // Modification of weather Icons 
         
-        // if(id < 250) {
-        //   Icon.src = './icons/storm.svg'
-        // } else if(id < 350){
-        //   Icon.src = './icons/drizzle.svg'
-        // } else if(id < 550){
-        //   Icon.src = './icons/rain.svg'
-        // } else if(id < 630){
-        //   Icon.src = './icons/snow.svg'
-        // } else if(id < 800){
-        //   Icon.src = './icons/atmosphere.svg'
-        // } else if(id === 800){
-        //   Icon.src = './icons/clear.svg'
-        // } else if(id > 800){
-        //   Icon.src = './icons/clouds.svg'
-        // }
+        if(id < 250) {
+          Icon.src = './icons/storm.png'
+        } else if(id < 350){
+          Icon.src = './icons/drizzle.png'
+        } else if(id < 550){
+          Icon.src = './icons/rainy.png'
+        } else if(id < 630){
+          Icon.src = './icons/snow.png'
+        } else if(id < 800){
+          Icon.src = './icons/atmosphere.png'
+        } else if(id === 800){
+          Icon.src = './icons/atmosphere.png'
+        } else if(id > 800){
+          Icon.src = './icons/clouds.png'
+        }
 
 
 
