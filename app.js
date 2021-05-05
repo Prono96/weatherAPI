@@ -4,7 +4,8 @@ window.addEventListener("load", () => {
   let locationTimezone = document.querySelector('.location-timezone');
   let TempDegree = document.querySelector('.temp-degree');
   let TempDescription = document.querySelector('.temp-description');
-  let Icon = document.querySelector('."weather-icon sun');
+  let tempIcon = document.querySelector('.weather-icon');
+  let iconFile;
 
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -25,31 +26,31 @@ window.addEventListener("load", () => {
       .then(data => {
         const {name} = data;
         const {feels_like} = data.main;
-        const {description} = data.weather[0];
-        const {icon} = data.weather[0];
+        const {id, description} = data.weather[0];
+        // const {icon} = data.weather[0];
 
         //Fetching data to UI
         locationTimezone.textContent = name;
         TempDegree.textContent = Math.round(feels_like - 273);
         TempDescription.textContent = description;
-        // Icon.textContent = icon;
+        // tempIcon.textContent = icon;
         
         // Modification of weather Icons 
         
         if(id < 250) {
-          Icon.src = './icons/storm.png'
+          tempIcon.src = 'icons/storm.png'
         } else if(id < 350){
-          Icon.src = './icons/drizzle.png'
+          tempIcon.src = 'icons/drizzle.png'
         } else if(id < 550){
-          Icon.src = './icons/rainy.png'
+          tempIcon.src = 'icons/rainy.png'
         } else if(id < 630){
-          Icon.src = './icons/snow.png'
+          tempIcon.src = 'icons/snow.png'
         } else if(id < 800){
-          Icon.src = './icons/atmosphere.png'
+          tempIcon.src = 'icons/atmosphere.png'
         } else if(id === 800){
-          Icon.src = './icons/atmosphere.png'
+          tempIcon.src = 'icons/atmosphere.png'
         } else if(id > 800){
-          Icon.src = './icons/clouds.png'
+          tempIcon.src = 'icons/cloud.png'
         }
 
 
