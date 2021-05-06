@@ -27,13 +27,13 @@ window.addEventListener("load", () => {
         const {name} = data;
         const {feels_like} = data.main;
         const {id, description} = data.weather[0];
-        // const {icon} = data.weather[0];
+        const {icon} = data.weather[0];
 
         //Fetching data to UI
         locationTimezone.textContent = name;
         TempDegree.textContent = Math.round(feels_like - 273);
         TempDescription.textContent = description;
-        // tempIcon.textContent = icon;
+        tempIcon.textContent = icon;
         
         // Modification of weather Icons 
         
