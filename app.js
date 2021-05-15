@@ -37,21 +37,21 @@ window.addEventListener("load", () => {
         
         // Modification of weather Icons 
         
-        if(id < 250) {
-          tempIcon.src = 'icons/storm.png'
-        } else if(id < 350){
-          tempIcon.src = 'icons/drizzle.png'
-        } else if(id < 550){
-          tempIcon.src = 'icons/rainy.png'
-        } else if(id < 630){
-          tempIcon.src = 'icons/snow.png'
-        } else if(id < 800){
-          tempIcon.src = 'icons/atmosphere.png'
-        } else if(id === 800){
-          tempIcon.src = 'icons/atmosphere.png'
-        } else if(id > 800){
-          tempIcon.src = 'icons/cloud.png'
-        }
+        // if(id < 250) {
+        //   tempIcon.src = 'icons/storm.png'
+        // } else if(id < 350){
+        //   tempIcon.src = 'icons/drizzle.png'
+        // } else if(id < 550){
+        //   tempIcon.src = 'icons/rainy.png'
+        // } else if(id < 630){
+        //   tempIcon.src = 'icons/snow.png'
+        // } else if(id < 800){
+        //   tempIcon.src = 'icons/atmosphere.png'
+        // } else if(id === 800){
+        //   tempIcon.src = 'icons/atmosphere.png'
+        // } else if(id > 800){
+        //   tempIcon.src = 'icons/cloud.png'
+        // }
 
 
 
